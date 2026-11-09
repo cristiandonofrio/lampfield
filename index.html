@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lampfield</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Sessions <span class="hint">Click to open in Claude · right-click for details</span></h1>
+        <div class="counts" id="counts"></div>
+        <div class="tools">
+          <button class="tool" id="hiddenbtn" hidden title="Sessions you took off the board">Hidden</button>
+          <button class="tool" id="ontop" aria-pressed="false" title="Keep this window above others">On top</button>
+          <button class="tool" id="sound" aria-pressed="true" title="Chime when a session starts needing you">Sound on</button>
+        </div>
+      </header>
+      <p class="note" id="note" hidden></p>
+      <div id="board"></div>
+    </div>
+    <div class="hiddenpanel" id="hiddenpanel" role="dialog" aria-label="Hidden sessions"></div>
+    <div class="drop" id="drop" role="dialog" aria-label="Session details"></div>
+    <div class="toast" id="toast"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "lampfield",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:ui": "vite build",
+    "test": "node --test src/ && cargo test",
+    "test:ui": "node --test src/",
+    "start": "vite build && cargo run -p lampfield",
+    "bundle": "tauri build --bundles app",
+    "assets": "python3 tools/make-assets.py && tauri icon src-tauri/icons/app-1024.png"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.4",
+    "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.12.4"
+  }
+}

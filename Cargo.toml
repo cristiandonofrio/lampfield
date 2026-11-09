@@ -1,0 +1,15 @@
+[workspace]
+resolver = "2"
+members = ["crates/lampfield-core", "src-tauri"]
+# A bare `cargo test` stays on the light crate and skips compiling Tauri.
+default-members = ["crates/lampfield-core"]
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
+
+# Transcripts can be tens of MB, so JSON parsing stays quick in debug builds too.
+[profile.dev.package.serde_json]
+opt-level = 2
